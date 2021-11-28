@@ -7,6 +7,8 @@ const codes = {
   ERROR: 500,
 };
 
+const requiredFields = ["name", "age", "hobbies"];
+
 const errorMessage = {
   code: codes.ERROR,
   message: "Mistake in server, please, try later",
@@ -14,5 +16,6 @@ const errorMessage = {
 
 module.exports = {
   errorMessage,
+  requiredFields,
   codes,
 };

@@ -1,12 +1,12 @@
 const { v4: uuidv4, validate: isUiidValid } = require("uuid");
 
 const persons = require("./presons.data");
-const { codes } = require("./constants/persons.constants");
+const { codes, requiredFields } = require("./constants/persons.constants");
 
 module.exports.PersonsService = class PersonsService {
   persons = persons;
 
-  requiredFields = ["name", "age", "hobbies"];
+  requiredFields = requiredFields;
 
   validateId(id) {
     if (!id) {
